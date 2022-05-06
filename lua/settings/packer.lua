@@ -40,14 +40,37 @@ packer.init {
 
 -- Pluggins
 return packer.startup(function(use)
+  use "wbthomason/packer.nvim"          -- plugin manager
 
-  use "lewis6991/impatient.nvim" 
-  use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "kyazdani42/nvim-web-devicons"
-  use "nvim-lua/plenary.nvim"
-  use "akinsho/bufferline.nvim"
-  use "nvim-lualine/lualine.nvim"
+  --performance
+  use "lewis6991/impatient.nvim"        --better performance 
+
+  -- themes
+  use 'navarasu/onedark.nvim'
+
+  --visual utilities
+  use {                                 --Parser and better highlight
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
+  }
+  use "nvim-lua/popup.nvim"             -- Popup window for packer an another
+  use "kyazdani42/nvim-web-devicons"    --icon management
+  use "nvim-lualine/lualine.nvim"       --info and status line 
+
+  --navigation files tools
+  use "akinsho/bufferline.nvim"         --line of all buffers
+  use {                                 --file tree
+      'kyazdani42/nvim-tree.lua',
+      requires = {
+        'kyazdani42/nvim-web-devicons', 
+      }
+  }
+
+  --autocompletition
+  use "numToStr/Comment.nvim" -- Easily comment stuff
+
+  --dont rememeber what this does
+  use "nvim-lua/plenary.nvim"           --::dont rememer what is this 
 
 
   if PACKER_BOOTSTRAP then

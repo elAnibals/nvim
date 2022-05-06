@@ -15,13 +15,22 @@ return (function()
     	keymap("n", "<left>", "<cmd>vertical resize -5<cr>", nores)
     	keymap("n", "<right>", "<cmd>vertical resize +5<cr>", nores)
 
-	--control tabs and split window
+	--control buffers and split window
 	keymap("n","<Tab>","<cmd>bnext<cr>",nore)
 	keymap("n","<S-Tab>","<cmd>bprevious<cr>",nore)
 	keymap("n","<leader>d","<cmd>bdelete<cr>",nore)
 	keymap("n","<leader>vs","<cmd>vsp<cr>",nore)
 	keymap("n","<leader>hs","<cmd>sp<cr>",nore)
 
+        --windows navigation
+        keymap("n", "<C-h>", "<C-w>h", nores)
+        keymap("n", "<C-j>", "<C-w>j", nores)
+        keymap("n", "<C-k>", "<C-w>k", nores)
+        keymap("n", "<C-l>", "<C-w>l", nores)
+
+        --better indentation
+        keymap("v", "<", "<gv", nore)
+        keymap("v", ">", ">gv", nore)
 	--sustitution
 	keymap("n","<leader>s","<cmd>%s/<cr>",nore)
 	keymap("v","<leader>s","<cmd>s/<cr>",nore)
