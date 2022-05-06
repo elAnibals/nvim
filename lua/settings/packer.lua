@@ -44,6 +44,14 @@ return packer.startup(function(use)
 
   --performance
   use "lewis6991/impatient.nvim"        --better performance 
+  
+  --init menu
+  use {
+    'goolord/alpha-nvim',
+    config = function ()
+      require'alpha'.setup(require'alpha.themes.dashboard'.config)
+    end
+}
 
   -- themes
   use 'navarasu/onedark.nvim'
@@ -60,17 +68,22 @@ return packer.startup(function(use)
   --navigation files tools
   use "akinsho/bufferline.nvim"         --line of all buffers
   use {                                 --file tree
-      'kyazdani42/nvim-tree.lua',
-      requires = {
-        'kyazdani42/nvim-web-devicons', 
-      }
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+    'kyazdani42/nvim-web-devicons', 
+    }
   }
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  
 
   --autocompletition
   use "numToStr/Comment.nvim" -- Easily comment stuff
 
   --dont rememeber what this does
-  use "nvim-lua/plenary.nvim"           --::dont rememer what is this 
+  use "nvim-lua/plenary.nvim"           
 
 
   if PACKER_BOOTSTRAP then

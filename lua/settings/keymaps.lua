@@ -43,5 +43,11 @@ return (function()
 
         --Nvim-Tree
         keymap("n","<leader>b","<cmd>NvimTreeToggle<CR>",nores)
-	
+
+        --Telescope 
+        keymap("n","<leader>f","<cmd>Telescope find_files<CR>",nores)
+        keymap("n","<leader>fb","<cmd>Telescope buffers<CR>",nores)
+        keymap("n","<leader>fw","<cmd>Telescope live_grep<CR>",nores)
+
+        
 end)()
