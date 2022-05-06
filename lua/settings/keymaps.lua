@@ -40,5 +40,8 @@ return (function()
 	--terminal
 	keymap("v","<leader>t","<cmd>split<CR><cmd>ter<CR><cmd>resize 15<CR>",nore)
     	keymap("n","<leader>t","<cmd>split<CR><cmd>ter<CR><cmd>resize 15<CR>",nore)
+
+        --Nvim-Tree
+        keymap("n","<leader>b","<cmd>NvimTreeToggle<CR>",nores)
 	
 end)()
