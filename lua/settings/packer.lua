@@ -61,6 +61,7 @@ return packer.startup(function(use)
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
   }
+  use "lukas-reineke/indent-blankline.nvim"--indent line
   use "nvim-lua/popup.nvim"             -- Popup window for packer an another
   use "kyazdani42/nvim-web-devicons"    --icon management
   use "nvim-lualine/lualine.nvim"       --info and status line 
@@ -77,10 +78,12 @@ return packer.startup(function(use)
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use "nvim-telescope/telescope-media-files.nvim"
   
 
   --autocompletition
   use "numToStr/Comment.nvim" -- Easily comment stuff
+  use "windwp/nvim-autopairs" -- autocomplete (){} "" etc
 
   --dont rememeber what this does
   use "nvim-lua/plenary.nvim"           
