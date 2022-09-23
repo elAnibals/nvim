@@ -32,8 +32,8 @@ return (function()
         keymap("v", "<", "<gv", nore)
         keymap("v", ">", ">gv", nore)
 	--sustitution
-	keymap("n","<leader>s","<cmd>%s/<cr>",nore)
-	keymap("v","<leader>s","<cmd>s/<cr>",nore)
+	keymap("n","<leader>s","<cmd>%s/",nore)
+	keymap("v","<leader>s","<cmd>s/",nore)
 	keymap("n","<leader>S","<cmd>nohlsearch<cr>",nore)
 	keymap("v","<leader>S","<cmd>nohlsearch<cr>",nore)
 

@@ -65,6 +65,7 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim"             -- Popup window for packer an another
   use "kyazdani42/nvim-web-devicons"    --icon management
   use "nvim-lualine/lualine.nvim"       --info and status line 
+  use "norcalli/nvim-colorizer.lua"     --visualization color tool
 
   --navigation files tools
   use "akinsho/bufferline.nvim"         --line of all buffers
@@ -84,9 +85,37 @@ return packer.startup(function(use)
   --autocompletition
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "windwp/nvim-autopairs" -- autocomplete (){} "" etc
+  use({                       --lsp 
+    "neovim/nvim-lspconfig",
+    "williamboman/nvim-lsp-installer",
+    "hrsh7th/cmp-nvim-lsp-signature-help",
+    "jose-elias-alvarez/null-ls.nvim",
+  })
+  use({                       --autocompletition tool
+    "hrsh7th/nvim-cmp",
+    requires = {
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-nvim-lua",
+      "hrsh7th/cmp-nvim-lsp",
+      "saadparwaiz1/cmp_luasnip",
+      "onsails/lspkind-nvim",
+      "L3MON4D3/LuaSnip",
+      "windwp/nvim-autopairs",
+    },
+  })
 
   --dont rememeber what this does
   use "nvim-lua/plenary.nvim"           
+
+  --git Integration
+
+  use {
+    "lewis6991/gitsigns.nvim",
+    requires = {
+    "nvim-lua/plenary.nvim"
+    }
+  }
 
 
   if PACKER_BOOTSTRAP then
