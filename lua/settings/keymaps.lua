@@ -49,5 +49,4 @@ return (function()
   keymap("n","<leader>fb","<cmd>Telescope buffers<CR>",nores)
   keymap("n","<leader>fw","<cmd>Telescope live_grep<CR>",nores)
 
-  
 end)()

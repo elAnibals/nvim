@@ -44,7 +44,7 @@ return packer.startup(function(use)
 
   --performance
   use "lewis6991/impatient.nvim"        --better performance 
-  
+
   --init menu
   use {
     'goolord/alpha-nvim',
@@ -74,7 +74,7 @@ return packer.startup(function(use)
   use {                                 --file tree
     'kyazdani42/nvim-tree.lua',
     requires = {
-    'kyazdani42/nvim-web-devicons', 
+    'kyazdani42/nvim-web-devicons',
     }
   }
   use {
@@ -82,12 +82,12 @@ return packer.startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use "nvim-telescope/telescope-media-files.nvim"
-  
+
 
   --autocompletition
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "windwp/nvim-autopairs" -- autocomplete (){} "" etc
-  
+
   use {
     'VonHeikemen/lsp-zero.nvim',
     requires = {
@@ -110,7 +110,7 @@ return packer.startup(function(use)
     }
   }
 
-  
+
 
   use "nvim-lua/plenary.nvim"            --dont remember what this does
 

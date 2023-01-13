@@ -3,9 +3,9 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  'tsserver',
   'sumneko_lua',
   'rust_analyzer',
+  'tsserver',
 })
 
 -- Fix Undefined global 'vim'
@@ -19,6 +19,33 @@ lsp.configure('sumneko_lua', {
     }
 })
 
+-- local kind_icons = {
+--   Text = "",
+--   Method = "m",
+--   Function = "",
+--   Constructor = "",
+--   Field = "",
+--   Variable = "",
+--   Class = "",
+--   Interface = "",
+--   Module = "",
+--   Property = "",
+--   Unit = "",
+--   Value = "",
+--   Enum = "",
+--   Keyword = "",
+--   Snippet = "",
+--   Color = "",
+--   File = "",
+--   Reference = "",
+--   Folder = "",
+--   EnumMember = "",
+--   Constant = "",
+--   Struct = "",
+--   Event = "",
+--   Operator = "",
+--   TypeParameter = "",
+-- }
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
@@ -31,8 +58,8 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 
 -- disable completion with tab
 -- this helps with copilot setup
-cmp_mappings['<Tab>'] = nil
-cmp_mappings['<S-Tab>'] = nil
+--cmp_mappings['<Tab>'] = nil
+--cmp_mappings['<S-Tab>'] = nil
 
 lsp.setup_nvim_cmp({
   mapping = cmp_mappings
@@ -42,9 +69,9 @@ lsp.set_preferences({
     suggest_lsp_servers = false,
     sign_icons = {
         error = ' ',
-        warn = 'W',
-        hint = 'H',
-        info = 'I'
+        warn = ' ',
+        hint = '',
+        info = ' '
     }
 })
 
