@@ -36,7 +36,7 @@ dashboard.section.buttons.val = {
 }
 
 local function footer()
-  return "By Anibal"
+  return "By elAnibals"
 end
 
 dashboard.section.footer.val = footer()
