@@ -19,6 +19,18 @@ lsp.configure('sumneko_lua', {
     }
 })
 
+local function border(hl_name)
+  return {
+    { "╭", hl_name },
+    { "─", hl_name },
+    { "╮", hl_name },
+    { "│", hl_name },
+    { "╯", hl_name },
+    { "─", hl_name },
+    { "╰", hl_name },
+    { "│", hl_name },
+  }
+end
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
@@ -29,7 +41,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ["<C-Space>"] = cmp.mapping.complete(),
 })
 local kind_icons = {
-  Text = "",
+  Text = "",
   Method = "m",
   Function = "",
   Constructor = "",
@@ -58,6 +70,16 @@ local kind_icons = {
 
 --cmp_mappings['<Tab>'] = nil
 --cmp_mappings['<S-Tab>'] = nil
+-- vim.o.completeopt = "menu,menuone,noselect"
+-- local cmp_window = require "cmp.utils.window"
+-- cmp_window.info_ = cmp_window.info
+-- cmp_window.info = function(self)
+--   local info = self:info_()
+--   info.scrollable = false
+--   return info
+-- end
+
+
 
 lsp.setup_nvim_cmp({
   mapping = cmp_mappings,
@@ -87,11 +109,13 @@ lsp.setup_nvim_cmp({
     select = false,
   },
   window = {
-    documentation = {
-      -- completion = cmp.config.window.bordered(),
-      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+    completion = {
+      border = border "CmpBorder",
+      winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
     },
-    completion = cmp.config.window.bordered(),
+    documentation = {
+      border = border "CmpDocBorder",
+    },
   },
   experimental = {
     ghost_text = false,

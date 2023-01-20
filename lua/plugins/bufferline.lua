@@ -32,7 +32,13 @@ options = {
       fg = { attribute = "fg", highlight = "LspDiagnosticsDefaultHint" },
       bg = { attribute = "bg", highlight = "Normal" },
       bold = true,
-      italic = true
     },
-  }
+  },
+  highlights = {
+    buffer_selected = {
+      fg="normal_fg",
+      bold = false,
+      italic = true,
+    },
+  },
 }
