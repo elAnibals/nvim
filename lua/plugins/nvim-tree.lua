@@ -57,10 +57,10 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
     enable = true,
     show_on_dirs = true,
     icons = {
-      hint = " ",
-      info = " ",
-      warning = " ",
-      error = " ",
+      hint = "",
+      info = " ",
+      warning = " ",
+      error = " ",
     },
   },
   filters = {
