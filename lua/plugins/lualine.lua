@@ -1,4 +1,3 @@
-
 local status, lualine = pcall(require, "lualine")
 if (not status) then return end
 
@@ -12,7 +11,7 @@ lualine.setup {
   },
   sections = {
     lualine_a = { 'mode' },
-    lualine_b = { 'branch' },
+    lualine_b = { 'branch',"diff" },
     lualine_c = { {
       'filename',
       file_status = true, -- displays file status (readonly status, modified status)
