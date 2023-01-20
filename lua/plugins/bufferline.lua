@@ -36,7 +36,7 @@ options = {
   },
   highlights = {
     buffer_selected = {
-      fg="normal_fg",
+      -- fg="normal_fg",
       bold = false,
       italic = true,
     },

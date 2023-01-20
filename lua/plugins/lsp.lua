@@ -42,11 +42,11 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 })
 local kind_icons = {
   Text = "",
-  Method = "m",
+  Method = "",
   Function = "",
   Constructor = "",
-  Field = "",
-  Variable = "",
+  Field = "",
+  Variable = "",
   Class = "",
   Interface = "",
   Module = "",
