@@ -8,6 +8,9 @@ lsp.ensure_installed({
   'tsserver',
 })
 
+local border_opts =
+  { border = "single", winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None" }
+
 -- Fix Undefined global 'vim'
 lsp.configure('sumneko_lua', {
     settings = {
@@ -109,13 +112,8 @@ lsp.setup_nvim_cmp({
     select = false,
   },
   window = {
-    completion = {
-      border = border "CmpBorder",
-      winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
-    },
-    documentation = {
-      border = border "CmpDocBorder",
-    },
+  completion = cmp.config.window.bordered(border_opts),
+    documentation = cmp.config.window.bordered(border_opts),
   },
   experimental = {
     ghost_text = false,

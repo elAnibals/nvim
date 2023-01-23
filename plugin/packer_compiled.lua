@@ -210,6 +210,11 @@ _G.packer_plugins = {
     path = "/home/anibal/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
+  ["one_monokai.nvim"] = {
+    loaded = true,
+    path = "/home/anibal/.local/share/nvim/site/pack/packer/start/one_monokai.nvim",
+    url = "https://github.com/cpea2506/one_monokai.nvim"
+  },
   ["onedark.nvim"] = {
     loaded = true,
     path = "/home/anibal/.local/share/nvim/site/pack/packer/start/onedark.nvim",

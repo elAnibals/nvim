@@ -1,3 +1,4 @@
-require('themes.onedark')
+require('themes.onedark-pro')
 
-require('onedark').load()
+require('onedarkpro').load()
+vim.cmd("colorscheme onedark_vivid")
