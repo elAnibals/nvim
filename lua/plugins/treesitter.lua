@@ -8,6 +8,7 @@ require'nvim-treesitter.configs'.setup {
     "dart",
     "javascript",
     "bash",
+    "c_sharp",
     "cpp",
     "css",
     "json",
