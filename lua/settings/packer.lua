@@ -57,6 +57,7 @@ return packer.startup(function(use)
   use 'navarasu/onedark.nvim'
   use 'projekt0n/github-nvim-theme'
   use "yorik1984/newpaper.nvim"
+  use "olimorris/onedarkpro.nvim"
 
   --visual utilities
   use {                                 --Parser and better highlight
@@ -123,3 +124,9 @@ return packer.startup(function(use)
     require("packer").sync()
   end
 end)
+
+
+
+
+
+

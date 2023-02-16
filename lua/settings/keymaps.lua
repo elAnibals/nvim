@@ -47,6 +47,6 @@ return (function()
   --Telescope 
   keymap("n","<leader>f","<cmd>Telescope find_files<CR>",nores)
   keymap("n","<leader>fb","<cmd>Telescope buffers<CR>",nores)
-  keymap("n","<leader>fw","<cmd>Telescope live_grep<CR>",nores)
+  keymap("n","<leader>ft","<cmd>Telescope live_grep<CR>",nores)
 
 end)()
